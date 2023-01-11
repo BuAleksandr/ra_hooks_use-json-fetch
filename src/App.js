@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Data from './Components/Data';
+
+
+const error = "http://localhost:7070/error";
+const data = "http://localhost:7070/data";
+const loading = "http://localhost:7070/loading";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Data url={error} />
+      <Data url={data} />
+      <Data url={loading} />
     </div>
   );
 }
